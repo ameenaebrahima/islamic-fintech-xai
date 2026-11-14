@@ -14,7 +14,7 @@ def arrow(ax,p,q):
 fig,ax=plt.subplots(figsize=(7,2.6)); ax.set_xlim(0,21); ax.set_ylim(0,8.1); ax.axis("off")
 NAVY,BLUE,RED,GREEN,PURPLE,STEEL="#1f4e79","#2c5d8f","#b5444b","#1e7e3e","#7570b3","#4f7397"
 box(ax,0.1,3.0,2.5,2.0,"Synthetic credit\ndata\n1,200 records",NAVY)
-box(ax,3.1,3.0,2.5,2.0,"Riba filter\n(proposed)\nTangible asset\nbacking",RED,dashed=True)
+box(ax,0.1,0.5,3.4,2.3,"Riba filter\n(tangible asset backing)\nProposed only,\nnot tested",RED,dashed=True)
 # supervised branch (top)
 box(ax,6.3,5.3,2.7,2.2,"80/20 stratified\nsplit\n960 train / 240 test",BLUE)
 box(ax,9.5,5.3,2.8,2.2,"Z-score scaling\nfitted on training\nrecords only\n(inside each CV fold)",BLUE)
@@ -24,7 +24,7 @@ box(ax,16.8,4.2,4.1,3.3,"AAOIFI decision layer\n(proposed)\nMurabaha (SS 8)\nMus
 box(ax,6.3,0.6,6.0,2.0,"All 1,200 records, no labels\nZ-score scaling on all records",PURPLE)
 box(ax,12.8,0.6,3.5,2.0,"K-Means and\nHierarchical\nk = 2 to 6, Silhouette",PURPLE)
 box(ax,16.8,0.6,4.1,2.0,"Customer segments\n(exploratory)",PURPLE)
-arrow(ax,(2.6,4.0),(3.1,4.0)); arrow(ax,(5.6,4.4),(6.3,6.2)); arrow(ax,(5.6,3.6),(6.3,1.8))
+arrow(ax,(2.6,4.5),(6.3,6.2)); arrow(ax,(2.6,3.5),(6.3,1.8))
 arrow(ax,(9.0,6.4),(9.5,6.4)); arrow(ax,(12.3,6.4),(12.8,6.4)); arrow(ax,(16.3,6.4),(16.8,6.2))
 arrow(ax,(12.3,1.6),(12.8,1.6)); arrow(ax,(16.3,1.6),(16.8,1.6))
 ax.text(6.3,7.85,"Supervised pipeline (tested)",fontsize=6.6,style="italic",color="#333333")
